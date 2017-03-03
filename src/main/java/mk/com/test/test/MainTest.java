@@ -28,15 +28,12 @@ public class MainTest {
     @Inject
     PokemonFacade pokemonFacade;
 
-    
-
     @PostConstruct
     public void init() {
 //        Logger.getLogger(MainTest.class.getName()).log(Level.INFO, "Start pokemons creation ....");
-//        for (int i = 1; i < 30; i++) {
+//              ----  >   Pokemon with just a name with Random Color and Random Type ....
 //        Pokemon pokemon = new Pokemon("lo");
 //        pokemonFacade.create(pokemon);
-//        }
 //        Logger.getLogger(MainTest.class.getName()).log(Level.INFO, "Pokemons Created");
 
     }
