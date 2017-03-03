@@ -41,7 +41,7 @@ public class Type implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "type_generator")
     @Column(name = "type_id")
     private Integer typeId;
-    //@NotNull
+    //@NotNull  Bean Validation NOT NULL Value ....
     @Basic(optional = false)
     @Size(min = 1, max = 45)
     private String type;

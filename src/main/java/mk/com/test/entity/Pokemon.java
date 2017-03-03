@@ -36,7 +36,7 @@ import mk.com.test.enums.PokemonType;
     @NamedQuery(name = "Pokemon.findAll", query = "SELECT p FROM Pokemon p")
     , @NamedQuery(name = "Pokemon.findByPokemonId", query = "SELECT p FROM Pokemon p WHERE p.pokemonId = :pokemonId")
     , @NamedQuery(name = "Pokemon.findByName", query = "SELECT p FROM Pokemon p WHERE p.name = :name")
-    , @NamedQuery(name = "Pokemon.findRedPokemons", query = "SELECT p FROM Pokemon p WHERE p.color = :color")
+    , @NamedQuery(name = "Pokemon.findRedPokemons", query = "SELECT p FROM Pokemon p WHERE p.color.color = :color")
 })
 public class Pokemon implements Serializable {
 

@@ -5,8 +5,10 @@
  */
 package mk.com.test.ejb;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -80,9 +82,11 @@ public class PokemonFacade {
     }
 
     // Return List of All Red Pokemons from DB based on named query, but maybe better is to fetch them based on CriteriaQuery >>> ?
-    public List<Pokemon> findAllReds() {
+    public List<Pokemon> findAllByColor(String color) {
+        // maybe find Color from existing colors ....
+//        Color c = (Color) getEntityManager().createNamedQuery("Color.findByColor").setParameter("color", color.toUpperCase()).getSingleResult();
         return getEntityManager().createNamedQuery("Pokemon.findRedPokemons")
-            .setParameter("color", colorFacade.find(1))
+            .setParameter("color", color)
             .getResultList();
     }
     

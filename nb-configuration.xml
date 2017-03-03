@@ -16,5 +16,45 @@ Any value defined here will override the pom.xml file value but is only applicab
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>1.7-web</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>gfv3ee6</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
         <org-netbeans-modules-maven-jaxws.rest_2e_config_2e_type>ide</org-netbeans-modules-maven-jaxws.rest_2e_config_2e_type>
+        <org-netbeans-modules-web-clientproject-api.js_2e_libs_2e_folder>js/libs</org-netbeans-modules-web-clientproject-api.js_2e_libs_2e_folder>
     </properties>
+    <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+        <library name="jquery" version="3.1.1">
+            <file localPath="src/main/webapp/js/libs/jquery/core.js" path="core.js"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.js" path="jquery.js"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.slim.js" path="jquery.slim.js"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.slim.min.js" path="jquery.slim.min.js"/>
+            <file localPath="src/main/webapp/js/libs/jquery/jquery.slim.min.map" path="jquery.slim.min.map"/>
+        </library>
+        <library name="tether" version="1.4.0">
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-arrows-dark.css" path="css/tether-theme-arrows-dark.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-arrows-dark.min.css" path="css/tether-theme-arrows-dark.min.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-arrows.css" path="css/tether-theme-arrows.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-arrows.min.css" path="css/tether-theme-arrows.min.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-basic.css" path="css/tether-theme-basic.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether-theme-basic.min.css" path="css/tether-theme-basic.min.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether.css" path="css/tether.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/css/tether.min.css" path="css/tether.min.css"/>
+            <file localPath="src/main/webapp/js/libs/tether/js/tether.js" path="js/tether.js"/>
+            <file localPath="src/main/webapp/js/libs/tether/js/tether.min.js" path="js/tether.min.js"/>
+        </library>
+        <library name="twitter-bootstrap" version="4.0.0-alpha.6">
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-grid.css" path="css/bootstrap-grid.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-grid.css.map" path="css/bootstrap-grid.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-grid.min.css" path="css/bootstrap-grid.min.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-grid.min.css.map" path="css/bootstrap-grid.min.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-reboot.css" path="css/bootstrap-reboot.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-reboot.css.map" path="css/bootstrap-reboot.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-reboot.min.css" path="css/bootstrap-reboot.min.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap-reboot.min.css.map" path="css/bootstrap-reboot.min.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap.css" path="css/bootstrap.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap.css.map" path="css/bootstrap.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap.min.css" path="css/bootstrap.min.css"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/css/bootstrap.min.css.map" path="css/bootstrap.min.css.map"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/js/bootstrap.js" path="js/bootstrap.js"/>
+            <file localPath="src/main/webapp/js/libs/twitter-bootstrap/js/bootstrap.min.js" path="js/bootstrap.min.js"/>
+        </library>
+    </libraries>
 </project-shared-configuration>

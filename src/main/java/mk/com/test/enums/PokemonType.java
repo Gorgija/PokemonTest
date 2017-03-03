@@ -22,7 +22,7 @@ public class PokemonType {
     }
 
     public static String[] types = {
-        "warrior", "big", "small", "teacher", "poet"
+        "warrior", "teacher", "small", "big", "poet", "poison", "water", "normal", "bug", "ghost", "dragon"
     };
 
 }

@@ -41,7 +41,7 @@ public class Color implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "color_generator")
     @Column(name = "color_id")
     private Integer colorId;
-    //@NotNull
+    //@NotNull   Bean Validation NOT NULL Value ...
     @Basic(optional = false)
     @Size(min = 1, max = 45)
     private String color;

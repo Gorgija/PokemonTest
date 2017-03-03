@@ -20,7 +20,7 @@ public class PokemonColor {
     }
 
     public static String[] colors = {
-        "white", "red", "green", "blue", "yellow"
+        "black", "red", "green", "yellow", "blue", "white", "grey", "purple", "orange", "brown", "gold"
     };
 
 }

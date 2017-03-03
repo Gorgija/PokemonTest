@@ -3,8 +3,134 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="js/libs/tether/css/tether.css" rel="stylesheet" type="text/css"/>
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
     </head>
     <body>
-        <h1>Start Pokemon</h1>
+        <div class="container">
+            <div class="row">
+                <div class="offset-4">
+                    <div class="nav-fill">
+                        <h1>Pokemon Checkout</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-5">
+                    <nav class="nav navbar-nav">
+                        <div class="jumbotron">
+                            <label for="pok_nums">Pokemons Count: </label>
+                            <h1 id="pok_nums" class="h1 text-center"></h1>
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="offset-5">
+                    <h2>Pokemons:</h2>
+                    <table id="pok_table" class="table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>NAME</th>
+                                <th>COLOR</th>
+                                <th>TYPE</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="offset-5">
+                    <h2>Pokemons REST Config:</h2>
+                    <h6 class="h6">[ For REST Config SWWAGER is better option ]</h6>
+                    <ul id="rest_info">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/libs/tether/js/tether.js" type="text/javascript"></script>
+        <script src="js/libs/twitter-bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                console.log("DOM Content Loaded...");
+                var count = document.getElementById("pok_nums");
+                $.get("/PokemonProject/rest/pokemons/count", function (data) {
+                    count.textContent = data;
+                });
+
+                $.get("/PokemonProject/rest/pokemons/list", function (data) {
+                    console.log(data);
+                    var table = document.getElementById("pok_table");
+                    var tBody = document.createElement("tbody");
+                    
+                    for (var i = 0; i < data.length; i++) {
+                        var tRow = document.createElement("tr");
+                        var tDataId = document.createElement("td");
+                        var tDataName = document.createElement("td");
+                        var tDataColor = document.createElement("td");
+                        var tDataType = document.createElement("td");
+                        tDataId.textContent = data[i].pokemonId;
+                        tDataName.textContent = data[i].name
+                        tDataColor.textContent = data[i].color.color;
+                        tDataType.textContent = data[i].type.type;
+                        tRow.appendChild(tDataId);
+                        tRow.appendChild(tDataType);
+                        tRow.appendChild(tDataColor);
+                        tRow.appendChild(tDataName);
+                        
+                        tBody.appendChild(tRow);
+                    }
+                    table.appendChild(tBody);
+                });
+                
+                $.get("/PokemonProject/rest/pokemons/config",function(data) {
+                    
+                    console.log(data);
+                    data = data.split("|");
+                    var config = document.getElementById("rest_info");
+                    for (var i = 0; i < data.length; i++) {
+                        var method = data[i].split(":")[1]; // GET
+                        var link = data[i].split(":")[0]; // linkot
+                        
+                        var liConfig = document.createElement("li");
+                                              
+                        var spanConfig = document.createElement("span");
+                        spanConfig.textContent = method;
+                        
+                        liConfig.appendChild(spanConfig);
+                        var p = document.createElement("p");
+                        p.textContent = link;
+                        liConfig.appendChild(p);
+                        
+                        config.appendChild(liConfig);
+                    }
+                    
+                })
+
+            });
+
+        </script>
     </body>
 </html>
