@@ -6,6 +6,7 @@ Glassfish Server , installation of MySqL Database ( start service internaly when
 Internet and placing in GlassFish LIB directory and EXPOSING 8080 port for Application Server ( you might wanna EXPOSE 4848 port for 
 Admistering server ).
 
+
   DDL Files are placed in META-INF directory, and there are 2 files, one is MySql generated for pokemon database and schema, and secon is 
   handwriten for creation of Database and placing some values for testing purposes.
 
