@@ -1,0 +1,13 @@
+mysqldb:
+  image: mysql:latest
+  environment:
+    MYSQL_DATABASE: pokemon
+    MYSQL_USER: root
+    MYSQL_PASSWORD: Sqladmin123
+    MYSQL_ROOT_PASSWORD: Sqladmin123
+glassfishap:
+  image: glassfish
+  links:
+    - mysqldb:db
+  ports:
+    - 8080:8080
